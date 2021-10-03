@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang='cs'>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<body>
+  <p id="countdown">10: 00</p>
+  <p id="para1"></p>
+  <p>Please select a gender</p>
+  <select id="list1" name="list1" onclick="populate();">
+  <option value="selectgender">--- Please select ---</option>
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+  </select><br><br>
+  <p id="pyears">Please select how many years you have worked for this company</p>
+  <select id="list2">
+  </select>
+    <h4>The audit below will help you to get a sense of your organisation’s representativeness of the<br>
+    community in which it is located. Ideally any organisation would reflect the demographics of its<br>
+    setting e.g. gender, age and ethnicity. In this instance we are interested in the relevance of your<br>
+    organisation to people with disabilities.</h4>
+    <p>**IMPORTANT**</p>
+    <span style="color:red;"><p>When you press begin you will have 10 minutes to complete this form.  If you do not complete within
+       the 10 minutes the page will refresh and you will be forced to start again.</p></span>             
+       <input type="button" id="start" name="start" value="Start">
+  <form id="section1form">   
+    <p>Please consider the following questions and identify your level of agreement with the statement</p>
+    <p>5. Strongly agree</p>
+    <p>4. Agree</p>
+    <p>3. Neutral/Don't know</p>
+    <p>2. Disagree</p>
+    <p>1. Strongly disagree</p>
+    <p class="text" title="You must select 1 value for each question in this section"><u><b>Section 1: Verification**</b></u></p>
+    <table rules="row" id="table1">
+      <tr>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td id="s1q1">I and/or my colleagues know where to get information to help us analyse<br>
+        the business case for consciously attracting people with disabilities as<br>
+        members</td>
+        <td><input type="radio" id="s1r1StrongDis" value="1" name="s1r1radio"></td>
+        <td><input type="radio" id="s1r1Disagree" value="2" name="s1r1radio"></td>
+        <td><input type="radio" id="s1r1Neutral" value="3" name="s1r1radio"></td>
+        <td><input type="radio" id="s1r1Agree" value="4" name="s1r1radio"></td>
+        <td><input type="radio" id="s1r1StrongAgree" value="5" name="s1r1radio"></td>
+      </tr>
+      <tr>
+        <td id="s1q2">I/my colleagues have researched the scope for increasing the participation<br>
+        of the broader community, in particular people with disabilities</td>
+        <td><input type="radio" id="s1r2StrongDis" value="1" name="s1r2radio"></td>
+        <td><input type="radio" id="s1r2Disagree" value="2" name="s1r2radio"></td>
+        <td><input type="radio" id="s1r2Neutral" value="3" name="s1r2radio"></td>
+        <td><input type="radio" id="s1r2Agree" value="4" name="s1r2radio"></td>
+        <td><input type="radio" id="s1r2StrongAgree" value="5" name="s1r2radio"></td>
+      </tr>
+      <tr>
+        <td id="s1q3">I know of disability service providers that I could link with in the local<br>
+        community</td>
+        <td><input type="radio" id="s1r3StrongDis" value="1" name="s1r3radio"></td>
+        <td><input type="radio" id="s1r3Disagree" value="2" name="s1r3radio"></td>
+        <td><input type="radio" id="s1r3Neutral" value="3" name="s1r3radio"></td>
+        <td><input type="radio" id="s1r3Agree" value="4" name="s1r3radio"></td>
+        <td><input type="radio" id="s1r3StrongAgree" value="5" name="s1r3radio"></td>
+      </tr>
+      <tr>
+        <td id="s1q4">My colleagues and I inclusivize our services to provide for people with<br>
+        disabilities</td>
+        <td><input type="radio" id="s1r4StrongDis" value="1" name="s1r4radio"></td>
+        <td><input type="radio" id="s1r4Disagree" value="2" name="s1r4radio"></td>
+        <td><input type="radio" id="s1r4Neutral" value="3" name="s1r4radio"></td>
+        <td><input type="radio" id="s1r4Agree" value="4" name="s1r4radio"></td>
+        <td><input type="radio" id="s1r4StrongAgree" value="5" name="s1r4radio"></td>
+      </tr>
+    </table><input type="button" id="continue1" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="secSumm">Section 1 Summary</h2></span>
+    <p id="Sum1"></p>
+  </form>
+  <form id="section2form" name="section2form">
+    <p id="section2Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 2: Value Proposition**</b></u></p>
+    <table rules="row" id="table">
+      <tr>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td id="s2q1">My colleagues and I have a significant contribution to make to the quality<br>
+        of life of people in our community, including people with disabilities</td>
+        <td><input type="radio" id="s2r1StrongDis" value="1" name="s2r1radio"></td>
+        <td><input type="radio" id="s2r1Disagree" value="2" name="s2r1radio"></td>
+        <td><input type="radio" id="s2r1Neutral" value="3" name="s2r1radio"></td>
+        <td><input type="radio" id="s2r1Agree" value="4" name="s2r1radio"></td>
+        <td><input type="radio" id="s2r1StrongAgree" value="5" name="s2r1radio"></td>
+      </tr>
+      <tr>
+        <td id="s2q2">My colleagues and I have the scope to improve opportunities for<br>
+        participation in fitness activities for people living in, or visiting our<br>
+        community, including people with disabilities<br></td>
+        <td><input type="radio" id="s2r2StrongDis" value="1" name="s2r2radio"></td>
+        <td><input type="radio" id="s2r2Disagree" value="2" name="s2r2radio"></td>
+        <td><input type="radio" id="s2r2Neutral" value="3" name="s2r2radio"></td>
+        <td><input type="radio" id="s2r2Agree" value="4" name="s2r2radio"></td>
+        <td><input type="radio" id="s2r2StrongAgree" value="5" name="s2r2radio"></td>
+      </tr>
+      <tr>
+        <td id="s2q3">The benefits of increasing our UniversAbility to increase participation are<br>
+        clear</td>
+        <td><input type="radio" id="s2r3StrongDis" value="1" name="s2r3radio"></td>
+        <td><input type="radio" id="s2r3Disagree" value="2" name="s2r3radio"></td>
+        <td><input type="radio" id="s2r3Neutral" value="3" name="s2r3radio"></td>
+        <td><input type="radio" id="s2r3Agree" value="4" name="s2r3radio"></td>
+        <td><input type="radio" id="s2r3StrongAgree" value="5" name="s2r3radio"></td>
+      </tr>
+      <tr>
+        <td id="s2q4">My colleagues and I play a major role in providing health services to the<br>
+        entire community, including people with disabilities</td>
+        <td><input type="radio" id="s2r4StrongDis" value="1" name="s2r4radio"></td>
+        <td><input type="radio" id="s2r4Disagree" value="2" name="s2r4radio"></td>
+        <td><input type="radio" id="s2r4Neutral" value="3" name="s2r4radio"></td>
+        <td><input type="radio" id="s2r4Agree" value="4" name="s2r4radio"></td>
+        <td><input type="radio" id="s2r4StrongAgree" value="5" name="s2r4radio"></td>
+      </tr>
+      <tr>
+        <td id="s2q5">The UniversAbility of our fitness services increases the job satisfaction<br>
+        and turnover of my staff</td>
+        <td><input type="radio" id="s2r5StrongDis" value="1" name="s2r5radio"></td>
+        <td><input type="radio" id="s2r5Disagree" value="2" name="s2r5radio"></td>
+        <td><input type="radio" id="s2r5Neutral" value="3" name="s2r5radio"></td>
+        <td><input type="radio" id="s2r5Agree" value="4" name="s2r5radio"></td>
+        <td><input type="radio" id="s2r5StrongAgree" value="5" name="s2r5radio"></td>
+      </tr>
+    </table><input type="button" id="continue2" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec2Summ">Section 2 Summary</h2></span>
+    <p id="Sum2"></p>
+  </form>
+  <form id="section3form" name="section3form">
+    <p id="section3Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 3: Vision**</b></u></p>
+    <table rules="row" id="section3">
+      <tr>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr id="s3q1">
+        <td>My colleagues and I envision ourselves as leaders of cultural change</td>
+        <td><input type="radio" id="s3r1StrongDis" value="1" name="s3r1radio"></td>
+        <td><input type="radio" id="s3r1Disagree" value="2" name="s3r1radio"></td>
+        <td><input type="radio" id="s3r1Neutral" value="3" name="s3r1radio"></td>
+        <td><input type="radio" id="s3r1Agree" value="4" name="s3r1radio"></td>
+        <td><input type="radio" id="s3r1StrongAgree" value="5" name="s3r1radio"></td>
+      </tr>
+    </table>
+    <p id="s3paraq2">Which of the following statements best describes your situation within your organisation (<b>Please<br>
+    select one</b>)</p>
+    <table rules="row" id="table">
+      <tr id="s3q2">
+        <td>I and/or my colleagues have identified set targets for increasing the UniversAbility<br>
+        of our services and are putting strategies in place to achieve these goals</td>
+        <td><input type="radio" id="s3r1StrongDis" value="5" name="s3r2radio"></td>
+      </tr>
+      <tr id="s3q3">
+        <td>I and/or my colleagues have identified scope for increasing the UniversAbility of<br>
+        our services</td>
+        <td><input type="radio" id="s3r2StrongDis" value="4" name="s3r2radio"></td>
+      </tr>
+      <tr id="s3q4">
+        <td>I THINK there may be scope for inclusivizing our services but am not sure</td>
+        <td><input type="radio" id="s3r3StrongDis" value="3" name="s3r2radio"></td>
+      </tr>
+      <tr id="s3q5">
+        <td>I have never considered inclusivizing our services until now</td>
+        <td><input type="radio" id="s3r4StrongDis" value="2" name="s3r2radio"></td>
+      </tr>
+      <tr id="s3q6">
+        <td>I don’t think inclusivizing our services, in particular for people with disabilities, is<br>
+        really an option for us but won’t rule it out completely until it has been fully<br>
+        explored</td>
+        <td><input type="radio" id="s3r4StrongDis" value="1" name="s3r2radio"></td>
+      </tr>
+    </table><input type="button" id="continue3" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec3Summ">Section 3 Summary</h2></span>
+    <p id="Sum3"></p>
+  </form>
+  <form id="section4form" name="section4form">
+    <p id="section4Ver" class="text" title="You must select either yes or no"><u><b>Section 4: Philosophy**</b></u></p>
+    <p>1.&nbsp; Does your organisation have stated ideals in your strategic plan or other management<br>
+     documents which relate UniversAbility of your services?</p> Yes<input type="radio" value="10" id="s4q1Yes" name="s4q1radio" onclick="checkBox(this)">  No<input type="radio" value="0" id="s4q1No" name="s4q1radio" onclick="checkBox(this)">
+  </form>
+  <form id="section4hiddenform" name="section4hiddenform">
+    <p>2.&nbsp; Do you think an inclusive philosophy is a lived experience by:</p>a)&nbsp; Management?<input type="checkbox" value="10" id="s4q2a" name="s4checkbox1" autocomplete="off"> &nbsp;&nbsp;&nbsp;b) Staff?<input type="checkbox" value="10" id="s4q2b" name="s4checkbox2" autocomplete="off"> &nbsp;&nbsp;&nbsp;c) Customers?<input type="checkbox" value="10" id="s4q2c" name="s4checkbox3" autocomplete="off"><br>
+  </form>
+  <form id="section4button" name="section4button">
+    <input type="button" id="continue4" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec4Summ">Section 4 Summary**</h2></span>
+    <p id="Sum4"></p>
+  </form>
+  <form id="section5form" name="section5form">
+    <p id="section5Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 5: Policy**</b></u></p>
+    <p id="s5q1">1. &nbsp;Does your charging policy account for the varied needs of your customers? E.g. No<br>
+     charge for personal assistants</p> Yes<input type="radio" value="10" id="s5q1Yes" name="s5r1radio">  No<input type="radio" value="0" id="s5q1No" name="s5r1radio">
+    <p id="s5q2">2. &nbsp;Do you track and monitor the proportion of your club members who experience<br>
+     disabilities?</p> Yes<input type="radio" value="10" id="s5q2Yes" name="s5r2radio">  No<input type="radio" value="0" id="s5q2No" name="s5r2radio">
+    <p id="s5q3">3. &nbsp;Have you a budget allocated to:<br>
+     (a)increasing the UniversAbility of your services?(eg. facilities,equipment and staff<br>
+     training)</p> Yes<input type="radio" value="10" id="s5q3aYes" name="s5r3radio">  No<input type="radio" value="0" id="s5q3aNo" name="s5r3radio"> &nbsp;&nbsp;&nbsp;Not needed because equipment is already fully<br>
+     accessible<input type="radio" value="10" id="s5q3NotNeeded" name="s5r3radio">
+    <p id="s5q4"> (b)increasing the UniversAbility of your policies?</p> Yes<input type="radio" value="10" id="s5q3bYes" name="s5r4radio">  No<input type="radio" value="0" id="s5q3bNo" name="s5r4radio">
+    <p id="s5q5">4. &nbsp;Are you familiar with the national legislation that relates to disability service provision?<br>
+     disabilities?</p> Yes<input type="radio" value="10" id="s5q4Yes" name="s5r5radio">  No<input type="radio" value="0" id="s5q4No" name="s5r5radio"><br>
+    <br>
+    <input type="button" id="continue5" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec5Summ">Section 5 Summary</h2></span>
+    <p id="Sum5"></p>
+  </form>
+  <form id="section6form" name="section6form">
+    <p id="section6Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 6: Processes**</b></u></p>
+    <p id="s6q1">1. &nbsp;Do you engage with disability groups in your local community?</p> Yes<input type="radio" value="10" id="s6q1Yes" name="s6r1radio">  No<input type="radio" value="0" id="s6q1No" name="s6r1radio">
+    <p id="s6q2">2. &nbsp;Have you forged any alliance/partnership with any disability organisation?</p> Yes<input type="radio" value="10" id="s6q2Yes" name="s6r2radio">  No<input type="radio" value="0" id="s6q2No" name="s6r2radio">
+    <p id="s6q3">3. &nbsp;Have you or your staff embraced any assistive technologies (E.g. Assist-Mi app)?</p> Yes<input type="radio" value="10" id="s6q3Yes" name="s6r3radio">  No<input type="radio" value="0" id="s6q3No" name="s6r3radio">
+    <p id="s6q4">4. &nbsp;Have you or your colleagues undertaken any research on Inclusivizing your service?</p> Yes<input type="radio" value="10" id="s6q4Yes" name="s6r4radio">  No<input type="radio" value="0" id="s6q4No" name="s6r4radio">
+    <p id="s6q5">5. &nbsp;Do you encourage your staff to engage in customer satisfaction conversations with different user groups?</p> Yes<input type="radio" value="10" id="s6q5Yes" name="s6r5radio">  No<input type="radio" value="0" id="s6q5No" name="s6r5radio"><br>
+    <br>
+    <input type="button" id="continue6" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec6Summ">Section 6 Summary</h2></span>
+    <p id="Sum6"></p>
+  </form>
+  <form id="section7form" name="section7form">
+    <p id="section7Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 7: Perception**</b></u></p>
+    <p id="s7q1">1. &nbsp; Do you gather information from your users on their beliefs about fitness being a<br>
+     fundamental right for all?</p> Yes<input type="radio" value="10" id="s7q1Yes" name="s7r1radio">  No<input type="radio" value="0" id="s7q1No" name="s7r1radio">
+    <p id="s7q2">2. &nbsp;Do you gather information from people who do NOT use your facility on fitness being a<br>
+     fundamental right for all?</p> Yes<input type="radio" value="10" id="s7q2Yes" name="s7r2radio">  No<input type="radio" value="0" id="s7q2No" name="s7r2radio"><br>
+    <br>
+    <input type="button" id="continue7" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec7Summ">Section 7 Summary</h2></span>
+    <p id="Sum7"></p>
+  </form>
+  <form id="section8form" name="section8form">
+    <p id="section8Ver" class="text" title="You must select 1 value for each question in this section. Table checks are optional"><u><b>Section 8: Programmes**</b></u></p>
+    <p>This section refers to programmes that you deliver, or support delivery of, to consciously<br>
+    inclusivize your services</p>
+    <p id="s8q1">1. &nbsp; Do you and your staff provide <b>programmes specifically</b> for people with disabilities?</p> Yes<input type="radio" value="0" id="s8q1Yes" name="s8r1radio">  No<input type="radio" value="0" id="s8q1No" name="s8r1radio">
+    <p id="s8choice1">Please select the relevant categories in the below table</p>
+    <table id="s8table1" rules="rows">
+      <tr>
+        <td width="250"><b>Disability Category</b></td>
+        <td></td>
+        <td colspan="2" width="150"><b>YES</b></td>
+      </tr>
+      <tr>
+        <td>Physical disabilities</td>
+        <td width="10%"></td>
+        <td><input type="checkbox" id="checkbox1" name="s8checkbox1" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Intellectual disabilities</td>
+        <td></td>
+        <td><input type="checkbox" id="checkbox2" name="s8checkbox2" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Sensory disabilities</td>
+        <td></td>
+        <td><input type="checkbox" id="checkbox3" name="s8checkbox3" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Mental health<br>
+        difficulties</td>
+        <td></td>
+        <td><input type="checkbox" id="checkbox4" name="s8checkbox4" value="10" autocomplete="off"></td>
+      </tr>
+    </table>
+    <p id="s8para">2. &nbsp;Do people with disabilities use the gym, pool, or participate in group activities etc. alongside<br>
+    other members?</p> Yes<input type="radio" value="0" id="s8q2Yes" name="s8r2radio">  No<input type="radio" value="0" id="s8q2No" name="s8r2radio"><br>
+    <br>
+    <p id="s8choice2">Please select the relevant categories in the below table</p>
+    <table id="s8table2" rules="rows">
+      <tr>
+        <td width="250"><b>Disability Category</b></td>
+        <td></td>
+        <td colspan="2" width="150"><b>YES</b></td>
+      </tr>
+      <tr>
+        <td>Physical disabilities</td>
+        <td width="10%"></td>
+        <td><input type="checkbox" id="checkbox5" name="s8checkbox5" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Intellectual disabilities</td>
+        <td></td>
+        <td><input type="checkbox" id="checkbox6" name="s8checkbox6" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Sensory disabilities</td>
+        <td></td>
+        <td><input type="checkbox" id="checkbox7" name="s8checkbox7" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Mental health<br>
+        difficulties</td>
+        <td></td>
+        <td><input type="checkbox" id="checkbox8" name="s8checkbox8" value="10" autocomplete="off"></td>
+      </tr>
+    </table>
+    <form id="s8button" name="s8button">
+      <input type="button" id="continue8" name="continue" value="Continue">
+      <span style="color:green;"><h2 id="sec8Summ">Section 8 Summary</h2></span>
+      <p id="Sum8"></p>
+    </form>
+  </form>
+  <form id="section9form" name="section9form">
+    <p id="section9Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 9: People**</b></u></p>
+    <p>1.&nbsp;Have you or any of your staff/volunteers had training that facilitates the inclusion of<br>
+     people with disabilities?</p> a.&nbsp;<label id="s9q1">Operational(teaching/instructional staff)</label>   Yes<input type="radio" value="10" id="s9q1aYes" name="s9r1radio"> No<input type="radio" value="0" id="s9q1aNo" name="s9r1radio"><br>
+     b.&nbsp;<label id="s9q2">Management</label>             &nbsp;Yes<input type="radio" value="10" id="s9q1bYes" name="s9r2radio"> No<input type="radio" value="0" id="s9q1bNo" name="s9r2radio"><br>
+     c.&nbsp;<label id="s9q3">Front of house</label>             &nbsp;Yes<input type="radio" value="10" id="s9q1cYes" name="s9r3radio"> No<input type="radio" value="0" id="s9q1cNo" name="s9r3radio"><br>
+     d.&nbsp;<label id="s9q4">Stakeholders/contracted staff</label>        &nbsp;Yes<input type="radio" value="10" id="s9q1dYes" name="s9r4radio"> No<input type="radio" value="0" id="s9q1dNo" name="s9r4radio">
+    <p id="s9q5">2.&nbsp;Are people with disabilities employed by your organisation and/or represented on your<br>
+     steering committee/ management committee/ board of management etc.?</p> Yes<input type="radio" value="10" id="s9q2Yes" name="s9r5radio">  No<input type="radio" value="0" id="s9q2No" name="s9r5radio">
+    <p id="s9q6">3.&nbsp;Is there a member of staff allocated as a liaison/point person for customers with<br>
+     disabilities?</p> Yes<input type="radio" value="10" id="s9q3Yes" name="s9r6radio">  No<input type="radio" value="0" id="s9q3No" name="s9r6radio"><br>
+    <input type="button" id="continue9" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec9Summ">Section 9 Summary</h2></span>
+    <p id="Sum9"></p>
+  </form>
+  <form id="section10form" name="section10form">
+    <p id="section10Ver" class="text" title="You must select 1 value for the first question"><u><b>Section 10: Physics Access/Place**</b></u></p>
+    <p id="s10q1">1.&nbsp;Have you or your colleagues carried out an audit to evaluate the UniversAbility of your<br>
+     facility</p> Yes<input type="radio" value="10" id="s10q1Yes" name="s10r1radio">  No<input type="radio" value="0" id="s10q1No" name="s10r1radio">
+    <p>2.&nbsp;Does your facility( or the facility you use) consider the following disabilities when evaluating<br>
+     UniversAbility:</p>
+    <table id="table3" rules="rows">
+      <tr>
+        <td width="250"><b>Disability Category</b></td>
+        <td></td>
+        <td colspan="2" width="150"><b>YES</b></td>
+      </tr>
+      <tr>
+        <td>Physical disabilities</td>
+        <td width="10%"></td>
+        <td><input type="checkbox" id="check1" name="s10checkbox1" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Intellectual disabilities</td>
+        <td></td>
+        <td><input type="checkbox" id="check2" name="s10checkbox2" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Sensory disabilities</td>
+        <td></td>
+        <td><input type="checkbox" id="check3" name="s10checkbox3" value="10" autocomplete="off"></td>
+      </tr>
+      <tr>
+        <td>Mental health<br>
+        difficulties</td>
+        <td></td>
+        <td><input type="checkbox" id="check4" name="s10checkbox4" value="10" autocomplete="off"></td>
+      </tr>
+    </table><input type="button" id="continue10" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec10Summ">Section 10 Summary</h2></span>
+    <p id="Sum10"></p>
+  </form>
+  <form id="section11form" name="section11form">
+    <p id="section11Ver" class="text" title="You must select 1 value for each question in this section"><u><b>Section 11: Promotion**</b></u></p>
+    <p id="s11q1">1.&nbsp;Is your promotional material inclusive of people with disabilities?<br>
+     facility</p> Yes<input type="radio" value="10" id="s11q1Yes" name="s11r1radio">  No<input type="radio" value="0" id="s11q1No" name="s11r1radio">
+    <p id="s11q2">2.&nbsp;Have you or your colleagues/staff developed any promotional materials with the aim of<br>
+     attracting people with disabilities?</p> Yes<input type="radio" value="10" id="s11q2Yes" name="s11r2radio">  No<input type="radio" value="0" id="s11q2No" name="s11r2radio"><br>
+    <br>
+    <input type="button" id="continue11" name="continue" value="Continue">
+    <span style="color:green;"><h2 id="sec11Summ">Section 11 Summary</h2></span>
+    <p id="Sum11"></p>
+  </form>
+  <span style="color:green;"><p id="finalp"><h2 id="final">Final Summary</h2></p></span>
+  <p id="fSumm1">Your organisation is evidently committed to inclusion.  Your perspective will be most valuable<br> 
+     at the face to face training session as both an advocate and a guide for inclusive fitness service provision.<br> 
+     You are highly relevant in your community and hence the organisation is sustainable and will remain so<br> 
+     once your current commitment is supported and enhanced over time.</p>
+  <p id="fSumm2">Your organisation is making genuine and meaningful efforts in the direction of universability.<br>  
+     However provision is probably patchy and inconsistent, which may cause some confusion among<br> 
+     members and potential members. Promotion of inclusive opportunities as an organisational priority has<br> 
+     the potential to broaden your relevance to an even greater number of community members. </p> 
+  <p id="fSumm3">While some work is being done to enhance inclusive provision, there is scope for significant<br> 
+     gains in this aspect. Building on what you are doing well and embracing new ideas will see you<br> 
+     organisation make the transitions to inclusivity with some ease. The face to face training session will be a<br> 
+     unique opportunity to learn from others in your sector.</p> 
+  <p id="fSumm4">The face to face training session will be of immense value to your organisation. An exciting<br> 
+     challenge awaits as you move towards universability. It will take some time but the secret is to keep doing<br> 
+     what you are doing well and gradually add other initiatives to make your services more inclusive. The face<br> 
+     to face training session will lead to significant learning for your organisation.</p>  
+     <input type="button" id="finish" value="Continue" onclick="finalSumm()">       
+  <script src="jsProject.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/*****************************************************
+*    Title: Simple Countdown Timer with JavaScript - Day 21
+*    Author: Florin Pop
+*    Site owner/sponsor: youtube.com
+*    Date: 2020
+*    Code version: edited 21 Jan 2020
+*    Availability: https://www.youtube.com/watch?v=x7WJEmxNlEs
+*    Modified:  
+*****************************************************/
+#countdown {
+  color: green;
+  font-size: 50px;
+  position: fixed;
+  top: -20px;
+  left: 50%;
+}
+
+#list2{
+    display: none; 
+}
+
+table {
+	border: 1px solid grey;
+    border-right:1px lightgrey; 
+    margin-top:0px; 
+    margin-left:0px;
+    width: 35%;
+}
+
+#table2{
+width: 20%;
+}
+
+#table3{
+width: 15%;
+}
+
+#continue{
+    margin-top:10px; 
+}
+
+input[name=continue] {
+  margin-top: 10px;
+}
+
+#section1form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section2form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section3form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section4form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section4hiddenform{
+    margin-top:30px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section5form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section6form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section7form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}   
+
+#section8form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+
+#section9form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+} 
+
+#section10form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section11form{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#final{
+    margin-top:60px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#section4button{
+    margin-top:10px; 
+    margin-left:0px;
+    display: none; 
+}
+
+#s8table1{
+    margin-top:10px; 
+    margin-left:0px;
+    width: 15%;
+    display: none; 
+}
+
+#s8table2{
+    margin-top:10px; 
+    margin-left:0px;
+    width: 15%;
+    display: none; 
+}
+
+#s8choice1{
+    display: none; 
+}
+
+#s8choice2{
+    display: none; 
+}
+
+#secSumm{
+    display: none;
+}
+
+#sec2Summ{
+    display: none;
+}
+
+#sec3Summ{
+    display: none;
+}
+
+#sec4Summ{
+    display: none;
+}
+
+#sec5Summ{
+    display: none;
+}
+
+#sec6Summ{
+    display: none;
+}
+
+#sec7Summ{
+    display: none;
+}
+
+#sec8Summ{
+    display: none;
+}
+
+#sec9Summ{
+    display: none;
+}
+
+#sec10Summ{
+    display: none;
+}
+
+#sec11Summ{
+    display: none;
+}
+
+#fSumm1{
+    display: none;
+}
+
+#fSumm2{
+    display: none;
+}
+
+#fSumm3{
+    display: none;
+}
+
+#fSumm4{
+    display: none;
+}
+
+#finalp{
+    display: none;
+}
+
+td {
+   border: 1px solid grey;
+   border-right:1px solid grey;
+   text-align: center;
+}
+
+#s8para { 
+  margin-top:60px;
+}
+
+#para2 { 
+  margin-top:60px;
+  margin-bottom:60px;
+}
+
+#para1 { 
+  margin-bottom: 100px;
+}
+
+tr:nth-child(even) {
+  background: #f0f0f5;
+}
+
+ tr:nth-child(odd) {
+  background: white;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.tab1 {
+    tab-size: 2;
+}
+
+/*****************************************************
+*    Title: Make text show up on hover over button
+*    Author: Massimiliano Kraus
+*    Site owner/sponsor: stackoverflow.com
+*    Date: 2017
+*    Code version: edited Oct 9 2017 at 13:44
+*    Availability: https://stackoverflow.com/questions/45456543/make-text-show-up-on-hover-over-button
+*    Modified:  
+*****************************************************/
+
+
+.text:hover {
+   background-color: #e6ffe6; 
+}
+
+#finish {
+display: none;
+}
+
+#pyears {
+display: none;
+}
+
+#t1{
+text-align: center;
+color: #1aff1a;
+}
+
+
+
+
+
